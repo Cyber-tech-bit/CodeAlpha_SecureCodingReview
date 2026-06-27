@@ -1,0 +1,9 @@
+Hello everyone, I am Keerit Kapoor, and this is my CodeAlpha Secure Coding Review project.
+
+For this task, I created a small local Python demo application containing common insecure coding patterns, then reviewed it using manual inspection and Bandit static analysis.
+
+The review identified four main risks: a hard-coded password, weak MD5 password hashing, unsafe pickle deserialization, and the use of shell=True in a subprocess call.
+
+I then produced a safer version of the application. The improved code uses PBKDF2-HMAC-SHA256 with a random salt, JSON instead of pickle, no hard-coded credentials, and allow-listed commands without a shell.
+
+This project helped me understand how secure coding decisions reduce real-world risk before an application is deployed. The full source code, findings, and report are available in my GitHub repository. Thank you.
